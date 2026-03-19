@@ -34,7 +34,6 @@ const Navbar = () => {
     { id: 'acercaDe', label: 'Acerca de' },
     { id: 'servicios', label: 'Servicios' },
     { id: 'porfolio', label: 'Portfolio' },
-    { id: 'reseñas', label: 'Reseñas' },
     { id: 'contacto', label: 'Contacto' }
   ];
 
