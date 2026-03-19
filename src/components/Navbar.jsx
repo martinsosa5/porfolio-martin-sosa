@@ -41,7 +41,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-black bg-opacity-75 fixed-top shadow-sm">
       <div className="container-lg">
         
-        <a href="#home" className="navbar-brand text-primary fw-bold fs-4">
+        <a href="#home" className="navbar-brand  fw-bold fs-4">
           Sosa Leandro Martin
         </a>
         
