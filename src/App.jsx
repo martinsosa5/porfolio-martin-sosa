@@ -2,7 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import Navbar from './components/Navbar';
 import Home from './sections/Home';
 import About from './sections/About';
-
+import Services from './sections/Services';
+import Porfolio from './sections/Porfolio';
+import Contact from './sections/Contact'; 
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 
 function App() {
@@ -60,28 +63,18 @@ function App() {
       <div style={{ position: 'relative', zIndex: 1 }}>
         
         <Navbar />
-        
+        <FloatingWhatsApp />
         <div style={{ paddingTop: '30px' }}>
           
-          <Home />
+        <Home />
 
-         <About />
+        <About />
 
-          <section id="servicios" className="min-vh-100 d-flex align-items-center justify-content-center">
-            <h1 className="text-white">Sección Servicios</h1>
-          </section>
+        <Services />
 
-          <section id="porfolio" className="min-vh-100 d-flex align-items-center justify-content-center">
-            <h1 className="text-white">Sección Portfolio</h1>
-          </section>
+        <Porfolio />
 
-          <section id="reseñas" className="min-vh-100 d-flex align-items-center justify-content-center">
-            <h1 className="text-white">Sección Reseñas</h1>
-          </section>
-
-          <section id="contacto" className="min-vh-100 d-flex align-items-center justify-content-center">
-            <h1 className="text-white">Sección Contacto</h1>
-          </section>
+        <Contact />
 
         </div>
       </div>
