@@ -2,46 +2,43 @@ import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaRobot, FaCameraRetro } from 'react-icons/fa6';
 
 const Services = () => {
-  // Datos de tus servicios reales
   const servicesData = [
     {
       id: 1,
-      title: "Desarrollo Full Stack",
-      desc: "Creación de aplicaciones web modernas, escalables y responsivas. Desde e-commerce hasta landing pages, utilizando React, Node.js y las mejores prácticas de UX/UI.",
+      title: "Desarrollo Full-Stack",
+      desc: "Creación de aplicaciones web robustas y escalables. Diseño arquitectónico desde la lógica del servidor (C#, Node.js) hasta interfaces modernas con React.",
       icon: <FaCode />
     },
     {
       id: 2,
-      title: "Sistemas y Bases de Datos",
-      desc: "Software a medida para digitalizar negocios y gestionar capacidades. Arquitectura robusta, integración de bases de datos (SQL, MongoDB) y creación de APIs eficientes.",
+      title: "Arquitectura y Bases de Datos",
+      desc: "Modelado e implementación de bases de datos empresariales (SQL Server, MySQL, MongoDB). Soluciones SaaS multi-tenant y optimización de flujos de datos.",
       icon: <FaServer />
     },
     {
       id: 3,
       title: "Automatización y Chatbots",
-      desc: "Optimización de procesos mediante bots interactivos en plataformas como Telegram. Integración fluida con herramientas como n8n y soluciones con Inteligencia Artificial.",
+      desc: "Optimización de procesos operativos mediante la integración de flujos automatizados con n8n, Telegram Bot API e Inteligencia Artificial.",
       icon: <FaRobot />
     },
     {
       id: 4,
-      title: "Fotografía y Diseño",
-      desc: "Cobertura profesional de eventos bajo MS Fotografía Deportiva y creación de identidad visual. Edición avanzada con Photoshop y Lightroom para destacar tu marca.",
+      title: "Fotografía y Comunicación",
+      desc: "Dirección visual y fotográfica. Retoque digital complejo con el ecosistema Adobe para consolidar la identidad gráfica y comercial de tu proyecto.",
       icon: <FaCameraRetro />
     }
   ];
 
-  // Variante para el contenedor: hace que las tarjetas aparezcan en cascada (una tras otra)
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2 // Retraso entre cada tarjeta
+        staggerChildren: 0.2
       }
     }
   };
 
-  // Variante individual para cada tarjeta
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
@@ -51,7 +48,6 @@ const Services = () => {
     <section id="servicios" className="py-5 min-vh-100 d-flex align-items-center">
       <div className="container-lg py-4">
         
-        {/* Título de la sección */}
         <motion.div 
           className="row justify-content-center mb-5"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -63,12 +59,11 @@ const Services = () => {
             <h2 className="fw-bold text-white fs-1">Mis Servicios</h2>
             <hr className="w-25 mx-auto text-primary border-primary border-2 opacity-100" />
             <p className="text-light opacity-75 mt-3 fs-5">
-              Soluciones integrales combinando ingeniería de software y creatividad visual.
+              Soluciones integrales combinando ingeniería de sistemas y visión estratégica visual.
             </p>
           </div>
         </motion.div>
 
-        {/* Grilla de Servicios */}
         <motion.div 
           className="row justify-content-center"
           variants={containerVariants}
@@ -79,26 +74,24 @@ const Services = () => {
           {servicesData.map((service) => (
             <motion.div key={service.id} className="col-md-6 col-lg-5 mb-4" variants={cardVariants}>
               
-              {/* Tarjeta con efecto Glassmorphism y Hover interactivo */}
               <motion.div 
                 className="service-card p-4 rounded-4 h-100 d-flex flex-column align-items-center text-center"
                 style={{
-                  background: 'rgba(25, 25, 25, 0.4)', // Fondo semitransparente
-                  backdropFilter: 'blur(10px)',        // Efecto cristal
+                  background: 'rgba(25, 25, 25, 0.4)',
+                  backdropFilter: 'blur(10px)',
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
                 whileHover={{ 
-                  y: -10, // Se eleva 10px
-                  boxShadow: '0 10px 30px rgba(35, 126, 235, 0.3)', // Resplandor azul
-                  borderColor: 'rgba(35, 126, 235, 0.5)' // El borde se pone azul
+                  y: -10,
+                  boxShadow: '0 10px 30px rgba(35, 126, 235, 0.3)',
+                  borderColor: 'rgba(35, 126, 235, 0.5)'
                 }}
                 transition={{ duration: 0.3 }}
               >
-                {/* Ícono animado */}
                 <motion.div 
                   className="icon mb-3 text-primary d-flex align-items-center justify-content-center"
                   style={{ fontSize: '3rem' }}
-                  whileHover={{ scale: 1.2, rotate: 5 }} // Crece y gira un poquito al pasar el mouse
+                  whileHover={{ scale: 1.2, rotate: 5 }}
                 >
                   {service.icon}
                 </motion.div>

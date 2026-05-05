@@ -3,55 +3,44 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaLink, FaGithub } from 'react-icons/fa6';
 
 const Portfolio = () => {
-  // Sacamos "Diseño" de las categorías
   const [filter, setFilter] = useState('Todos');
   const categories = ['Todos', 'Desarrollo', 'Fotografía'];
 
-  // Proyectos ordenados estratégicamente
   const projects = [
     {
       id: 1,
-      title: "Sistema Web - Comuna Los Sosa",
+      title: "Nexa | Gestión y E-commerce",
       category: "Desarrollo",
-      img: "/img/SOFT-GEST-COMUNAL.png", 
-      desc: "Plataforma web integral desarrollada para la gestión institucional y comunicación de la comuna.",
+      img: "/img/NEXA-SISTEM.png", // Asegurate de tener una imagen o cambiar la ruta
+      desc: "Solución de software B2B/B2C orientada a la optimización del control de inventario y comercialización digital. Arquitectura diseñada desde cero.",
       link: "#",
-      github: ""
+      github: "#"
     },
     {
       id: 2,
-      title: "Bot de Reservas para Gimnasio",
+      title: "Sistema Gubernamental - Comuna Los Sosa",
+      category: "Desarrollo",
+      img: "/img/SOFT-GEST-COMUNAL.png", 
+      desc: "Transformación digital y optimización de flujos de trabajo administrativos, aplicando desarrollo asistido por IA para mejoras de infraestructura.",
+      link: "#",
+      github: ""
+    },
+    {
+      id: 3,
+      title: "GymBot | Reservas Automatizadas",
       category: "Desarrollo",
       img: "/img/bot-gym.png",
-      desc: "Chatbot en Telegram integrado con n8n y MongoDB para automatizar la reserva de clases.",
+      desc: "Sistema de gestión de clientes integrado nativamente en Telegram mediante n8n y MongoDB. Lógica diseñada para minimizar la fricción del usuario.",
       link: "https://drive.google.com/file/d/1Ey-HumZTb7jCF4OK4F-JA_ZpNJTauM63/view?usp=sharing",
       github: ""
     },
-    /* {
-      id: 3,
-      title: "Sistema de Gestión Deportiva",
-      category: "Desarrollo",
-      img: "/img/3.jpg",
-      desc: "Plataforma para el control de capacidad y gestión de cupos en clases especiales como CrossFit y Pilates.",
-      link: "#",
-      github: "#"
-    },
     {
       id: 4,
-      title: "Módulo E-commerce",
-      category: "Desarrollo",
-      img: "/img/4.jpg",
-      desc: "Implementación de un sistema de ventas desarrollado como proyecto de software universitario.",
-      link: "#",
-      github: "#"
-    }, */
-    {
-      id: 5,
       title: "MS Fotografía Deportiva",
       category: "Fotografía",
       img: "/img/ms-foto.png",
-      desc: "Cobertura profesional de eventos deportivos locales. Captura de momentos clave y edición avanzada.",
-      link: "https://www.instagram.com/ms_fotografiadeportiva?igsh=MWI5YzRkaTIxZDdhbw%3D%3D&utm_source=qr",
+      desc: "Cobertura profesional orientada a la captura estratégica de momentos de alto valor para clubes. Edición y composición digital avanzada.",
+      link: "https://www.instagram.com/ms_fotografiadeportiva",
       github: null 
     }
   ];
@@ -75,7 +64,7 @@ const Portfolio = () => {
             <h2 className="fw-bold text-white fs-1">Mi Portfolio</h2>
             <hr className="w-25 mx-auto text-primary border-primary border-2 opacity-100" />
             <p className="text-light opacity-75 mt-3 fs-5">
-              Una selección de mis últimos proyectos y trabajos destacados.
+              Una selección de arquitecturas, sistemas y soluciones digitales desarrolladas.
             </p>
           </div>
         </motion.div>
